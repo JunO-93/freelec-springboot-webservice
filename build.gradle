@@ -1,0 +1,56 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+}
+
+plugins {
+    id 'java'
+    id 'eclipse'
+    id 'org.springframework.boot' version '2.1.7.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.7.RELEASE'
+}
+
+group = 'com.leeo.book'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+    all {
+        //logback과의 충돌 방지
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'com.h2database:h2'
+
+    //log4j2
+    implementation 'org.springframework.boot:spring-boot-starter-log4j2'
+
+    //mustache
+    implementation 'org.springframework.boot:spring-boot-starter-mustache'
+
+}
+
+test {
+    useJUnitPlatform()
+}
