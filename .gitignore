@@ -40,3 +40,12 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/.idea/dataSources/a8cef288-fedf-452b-bd3d-c3892b815838/storage_v2/_src_/database/TESTDB.kGhKkw.meta
+/settings.gradle
+/.idea/dataSources/a8cef288-fedf-452b-bd3d-c3892b815838/storage_v2/_src_/database/TESTDB.kGhKkw/schema/PUBLIC.aaZQjQ.meta
+/.idea/dataSources/a8cef288-fedf-452b-bd3d-c3892b815838/storage_v2/_src_/database/TESTDB.kGhKkw/schema/INFORMATION_SCHEMA.NBgcMw.meta
+/gradlew.bat
+/gradlew
+/.idea/dataSources/a8cef288-fedf-452b-bd3d-c3892b815838.xml
+/.idea/dataSources.local.xml
+/.idea/dataSources.xml
